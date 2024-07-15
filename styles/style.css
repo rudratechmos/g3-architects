@@ -105,6 +105,7 @@ main{
 .teams{
     align-items: center;
     margin-top: 130px;
+    max-width: 1440px;
 }
 
 .team-img-container{
@@ -131,26 +132,17 @@ main{
     margin: 24px 0px 32px 0px  ;
 }
 
-/* mobile responsive styles */
-@media screen and (max-width:576px){
-    .navbar, .nav-links, .teams{
-        flex-direction: column;
-    }
-    .team-img-container{
-        grid-template-columns: repeat(1, 1fr);
-        margin-bottom: 73px;
-    }
-}
-
 /* facts styles */
 .facts{
+    max-width: 1440px;
     margin-top: 130px ;
 }
 
 .cards-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 100px 0px 0px 50px;
+    margin-top: 100px;
+    margin-left: 50px;
 }
 
 .card{
@@ -177,6 +169,51 @@ main{
     font-weight: 600;
 }
 
+/* sponsor styles */
+.sponsors{
+    margin-top: 180px;
+}
+
+.sponsor-info{
+    max-width: 542px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sponsor-info p{
+    margin: 24px 0px 50px;
+}
+
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+/* mobile responsive styles */
+@media screen and (max-width:576px){
+    .navbar, .nav-links, .teams{
+        flex-direction: column;
+    }
+    .team-img-container{
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 73px;
+    }
+    .cards-container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .sponsor-companies{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        justify-items: center;
+    }
+}
+
 /* tablet responsive styles */
 @media screen and (min-width:576px) and (max-width:992px){
     .teams{
@@ -184,5 +221,15 @@ main{
     }
     .team-img-container{
         margin-bottom: 73px;
+    }
+    .cards-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+    .sponsor-companies{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        justify-items: center;
     }
 }
